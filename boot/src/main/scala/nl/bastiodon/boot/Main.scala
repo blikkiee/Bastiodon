@@ -16,7 +16,7 @@ object Main extends App {
 // t k b q x b k t
 
 // pawn   p
-// tower  t
+// rook  t
 // knight k
 // bishop b
 // queen  q

@@ -8,8 +8,8 @@ object Piece {
   case class Pawn(colour: Colour) extends Piece {
     override val symbol: String = "p"
   }
-  case class Tower(colour: Colour) extends Piece {
-    override val symbol: String = "t"
+  case class Rook(colour: Colour) extends Piece {
+    override val symbol: String = "r"
   }
   case class Knight(colour: Colour) extends Piece {
     override val symbol: String = "k"

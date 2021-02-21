@@ -25,14 +25,14 @@ case class Board(spaces: Map[Space, Piece]){
 object Board {
   def default(): Board = Board(
     Map(
-      Space(1, 'A') -> Piece.Tower(White),
+      Space(1, 'A') -> Piece.Rook(White),
       Space(1, 'B') -> Piece.Knight(White),
       Space(1, 'C') -> Piece.Bishop(White),
       Space(1, 'D') -> Piece.Queen(White),
       Space(1, 'E') -> Piece.King(White),
       Space(1, 'F') -> Piece.Bishop(White),
       Space(1, 'G') -> Piece.Knight(White),
-      Space(1, 'H') -> Piece.Tower(White),
+      Space(1, 'H') -> Piece.Rook(White),
 
       Space(2, 'A') -> Piece.Pawn(White),
       Space(2, 'B') -> Piece.Pawn(White),
@@ -52,14 +52,14 @@ object Board {
       Space(7, 'G') -> Piece.Pawn(Black),
       Space(7, 'H') -> Piece.Pawn(Black),
 
-      Space(8, 'A') -> Piece.Tower(Black),
+      Space(8, 'A') -> Piece.Rook(Black),
       Space(8, 'B') -> Piece.Knight(Black),
       Space(8, 'C') -> Piece.Bishop(Black),
       Space(8, 'D') -> Piece.Queen(Black),
       Space(8, 'E') -> Piece.King(Black),
       Space(8, 'F') -> Piece.Bishop(Black),
       Space(8, 'G') -> Piece.Knight(Black),
-      Space(8, 'H') -> Piece.Tower(Black),
+      Space(8, 'H') -> Piece.Rook(Black),
     )
   )
 }

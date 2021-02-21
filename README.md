@@ -8,7 +8,7 @@ It is a chess project.
   - mark players pieces with distinct colour when printing in console
 - make chess pieces move correctly
   - pawn
-  - tower
+  - rook
   - knight
   - bishop
   - queen
