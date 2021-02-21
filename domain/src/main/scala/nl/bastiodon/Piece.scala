@@ -1,6 +1,7 @@
 package nl.bastiodon.domain
 
 sealed trait Piece {
+  val colour: Colour
   val symbol: String
 }
 

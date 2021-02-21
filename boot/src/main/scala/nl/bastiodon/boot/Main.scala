@@ -3,7 +3,7 @@ package nl.bastiodon.boot
 import nl.bastiodon.domain.Board
 
 object Main extends App {
-  Board.default.print()
+  Board.default.printIt()
 }
 
 // t k b q x b k t

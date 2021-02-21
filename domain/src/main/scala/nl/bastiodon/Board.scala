@@ -2,7 +2,7 @@ package nl.bastiodon.domain
 
 case class Board(spaces: Map[Space, Piece]){
 
-  def print(): Unit = {
+  def printIt(): Unit = {
     println("--------------------")
     rows.reverse.foreach(printRow)
     println("--------------------")
@@ -13,12 +13,20 @@ case class Board(spaces: Map[Space, Piece]){
   private val rows = Seq(1, 2, 3, 4, 5, 6, 7, 8)
 
   private def printRow(row: Int): Unit = {
-    val pieces = columns
-      .map{ c => spaces.lift(Space(row, c)) }
-      .map{ s => s.map(_.symbol) }
-      .map{ _.getOrElse(".") }
-      .reduce{ (ps, p) => s"$ps $p" }
-    println(s"$row| $pieces |")
+    val pieces = columns.map{ c => spaces.lift(Space(row, c)) }
+    print(s"$row| ")
+    for(p <- pieces) {
+      p match {
+        case Some(piece) => printPiece(piece)
+        case None => print(Console.RESET + ". ")
+      }
+    }
+    print(Console.RESET + "|\n")
+  }
+
+  private def printPiece(piece: Piece): Unit = {
+    val colour = if(piece.colour == Black) Console.BLUE else Console.WHITE
+    print(colour + Console.BOLD + s"${piece.symbol} ")
   }
 }
 

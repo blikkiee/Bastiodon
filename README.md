@@ -5,7 +5,7 @@ It is a chess project.
 ## TODO
 - print chessboard
   - ~~print default board~~
-  - mark players pieces with distinct colour when printing in console
+  - ~~mark players pieces with distinct colour when printing in console~~
 - make chess pieces move correctly
   - pawn
   - rook
